@@ -5,14 +5,14 @@ from time import sleep
 
 
 def main():
-    bot = telegram.Bot(token="7913301689:AAGELmKkdM2fDvWpqfDATB4JeNKqXoBsO3M")
+    bot = telegram.Bot(token=os.environ["TG_TOKEN"])
     while True:
         pictures = os.listdir("images")
         random.shuffle(pictures)
         for picture in pictures:
             file_path = os.path.join("images", picture)
             with open(file_path, "rb") as file:
-                bot.send_photo(chat_id="@download_space_foto", photo=file)
+                bot.send_photo(chat_id=os.environ["TG_CHAT_ID"], photo=file)
             sleep(4200)
 
 

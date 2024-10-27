@@ -1,10 +1,11 @@
 import requests
 from datetime import datetime
 from download import download_images
+import os
 
 
 def download_epic():
-    payload = {"api_key":"QiCsHOaKtCuOjPcGxtwU2j5fda66eGXyS3485lol", "count":30}
+    payload = {"api_key":os.environ["NASA_APY_KEY"], "count":30}
     url = "https://api.nasa.gov/EPIC/api/natural/images"
     response = requests.get(url, params=payload)
     response.raise_for_status()

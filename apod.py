@@ -13,7 +13,7 @@ def split_get(url):
 
 
 def download_nasa():
-    payload = {"api_key":"QiCsHOaKtCuOjPcGxtwU2j5fda66eGXyS3485lol", "count":30}
+    payload = {"api_key":os.environ["NASA_APY_KEY"], "count":30}
     url = "https://api.nasa.gov/planetary/apod"
     response = requests.get(url, params=payload)
     response.raise_for_status()

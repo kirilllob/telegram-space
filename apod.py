@@ -2,6 +2,7 @@ from urllib.parse import unquote, urlparse
 import requests
 import os
 from download import download_image
+from dotenv import load_dotenv
 
 
 def split_get(url):
@@ -27,6 +28,7 @@ def download_nasa(api_key):
 
 
 def main():
+    load_dotenv()
     api_key = os.environ["NASA_APY_KEY"]
     download_nasa(api_key)
 

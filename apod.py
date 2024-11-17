@@ -1,7 +1,7 @@
 from urllib.parse import unquote, urlparse
 import requests
 import os
-from download import download_images
+from download import download_image
 
 
 def split_get(url):
@@ -23,7 +23,7 @@ def download_nasa(api_key):
         if apod.get("media_type") == "image":
             apod_link_image = apod["url"] or apod["hdurl"]
         name, extension = split_get(apod_link_image)
-        download_images(apod_link_image, f"images/{name}{extension}")
+        download_image(apod_link_image, f"images/{name}{extension}")
 
 
 def main():

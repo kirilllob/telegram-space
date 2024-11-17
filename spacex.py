@@ -1,6 +1,6 @@
 import requests
 import argparse
-from download import download_images
+from download import download_image
 
 
 def fetch_spacex_last_launch(launch_id):
@@ -10,7 +10,7 @@ def fetch_spacex_last_launch(launch_id):
     url_images = response.json()["links"]["flickr"]["original"]
 
     for image_number, image in enumerate(url_images):
-        download_images(image, f"images/spacex{image_number}.jpg")
+        download_image(image, f"images/spacex{image_number}.jpg")
 
 
 def main():

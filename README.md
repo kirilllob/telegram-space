@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ```
 python tgBot.py
 ```
-Чтобы загрузить фотографии из конкретного запуска, нужно передать функции Fetch_cpacex_last_launch ID
+Чтобы загрузить фотографии из конкретного запуска, нужно передать функции Fetch_spacex_last_launch ID
 запуска в аргументе `--id` при запуске скрипта:
 ```
 python fetch_spacex_images.py

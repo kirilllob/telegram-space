@@ -2,6 +2,7 @@ import telegram
 import random
 import os
 from time import sleep
+from dotenv import load_dotenv
 
 
 def main():
@@ -18,3 +19,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    load_dotenv()

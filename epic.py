@@ -4,8 +4,8 @@ from download import download_images
 import os
 
 
-def download_epic():
-    payload = {"api_key":os.environ["NASA_APY_KEY"], "count":30}
+def download_epic(api_key):
+    payload = {"api_key":api_key, "count":30}
     url = "https://api.nasa.gov/EPIC/api/natural/images"
     response = requests.get(url, params=payload)
     response.raise_for_status()
@@ -18,7 +18,8 @@ def download_epic():
 
 
 def main():
-    download_epic()
+    download_epic(api_key)
+    api_key=os.environ["NASA_APY_KEY"]
 
 
 if __name__ == '__main__':

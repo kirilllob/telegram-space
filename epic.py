@@ -13,8 +13,8 @@ def download_epic(api_key):
         date_image = epic["date"]
         date_image = datetime.fromisoformat(date_image).strftime("%Y/%m/%d")
         name_image = epic["image"]
-        url_epic_images = f"https://api.nasa.gov/EPIC/archive/natural/{date_image}/png/{name_image}.png?api_key=QiCsHOaKtCuOjPcGxtwU2j5fda66eGXyS3485lol"
-        download_image(url_epic_images, f"images/{name_image}.png")
+        url_epic_images = f"https://api.nasa.gov/EPIC/archive/natural/{date_image}/png/{name_image}.png"
+        download_image(url_epic_images,payload, f"images/{name_image}.png")
 
 
 def main():

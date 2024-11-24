@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 
 def main():
+    load_dotenv()
     bot = telegram.Bot(token=os.environ["TG_TOKEN"])
     departure_time = "4200"
     chat_id = os.environ["TG_CHAT_ID"]
@@ -21,4 +22,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    load_dotenv()
+

@@ -20,8 +20,9 @@ def download_epic(api_key):
 
 def main():
     load_dotenv()
-    download_epic(api_key)
     api_key=os.environ["NASA_APY_KEY"]
+    download_epic(api_key)
+    
 
 
 if __name__ == '__main__':
